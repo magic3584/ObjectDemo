@@ -16,6 +16,7 @@
 		A1E528511CA1219D003735E9 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E528501CA1219D003735E9 /* ViewController1.m */; };
 		A1E528541CA121A8003735E9 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E528531CA121A8003735E9 /* ViewController2.m */; };
 		A1E5285A1CA1245A003735E9 /* SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E528591CA1245A003735E9 /* SearchBar.m */; };
+		A1E528601CA14C6D003735E9 /* SearchLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E5285F1CA14C6D003735E9 /* SearchLogic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		A1E528531CA121A8003735E9 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		A1E528581CA1245A003735E9 /* SearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBar.h; sourceTree = "<group>"; };
 		A1E528591CA1245A003735E9 /* SearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBar.m; sourceTree = "<group>"; };
+		A1E5285E1CA14C6D003735E9 /* SearchLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchLogic.h; sourceTree = "<group>"; };
+		A1E5285F1CA14C6D003735E9 /* SearchLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchLogic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 			children = (
 				A1E5283B1CA11655003735E9 /* AppDelegate.h */,
 				A1E5283C1CA11655003735E9 /* AppDelegate.m */,
+				A1E5285E1CA14C6D003735E9 /* SearchLogic.h */,
+				A1E5285F1CA14C6D003735E9 /* SearchLogic.m */,
 				A1E528581CA1245A003735E9 /* SearchBar.h */,
 				A1E528591CA1245A003735E9 /* SearchBar.m */,
 				A1E5283E1CA11655003735E9 /* ViewController.h */,
@@ -166,6 +171,7 @@
 			files = (
 				A1E528511CA1219D003735E9 /* ViewController1.m in Sources */,
 				A1E528401CA11655003735E9 /* ViewController.m in Sources */,
+				A1E528601CA14C6D003735E9 /* SearchLogic.m in Sources */,
 				A1E528541CA121A8003735E9 /* ViewController2.m in Sources */,
 				A1E5283D1CA11655003735E9 /* AppDelegate.m in Sources */,
 				A1E5283A1CA11655003735E9 /* main.m in Sources */,
@@ -316,6 +322,7 @@
 				A1E5284E1CA11655003735E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

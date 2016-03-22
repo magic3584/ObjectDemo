@@ -33,4 +33,11 @@
     }
     return self;
 }
+//新增
+-(instancetype)initWithPlaceholder:(NSString *)placeholder searchLogic:(SearchLogic *)logic {
+    if (self = [self initWithPlaceholder:placeholder]) {
+        _logic = logic;
+    }
+    return self;
+}
 @end
