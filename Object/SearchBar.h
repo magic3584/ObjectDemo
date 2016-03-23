@@ -10,11 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "SearchLogic.h"
 
-//@protocol SearchProtocol <NSObject>
-//
-//- (void)search;
-//
-//@end
+
 
 @interface SearchBar : UIView
 
@@ -23,10 +19,10 @@
 //新增
 @property (nonatomic, strong) SearchLogic *logic;
 
--(instancetype)initWithPlaceholder:(NSString *)placeholder;
+-(instancetype)initWithFrame:(CGRect)frame searchBarStyle:(SearchBarStyle)style;
 
 //新增
--(instancetype)initWithPlaceholder:(NSString *)placeholder searchLogic:(SearchLogic *)logic;
+-(instancetype)initWithFrame:(CGRect)frame searchBarStyle:(SearchBarStyle)style searchLogic:(SearchLogic *)logic;
 
 //-(instancetype)initWithPlaceholder:(NSString *)placeholder searchProtocol:(id<SearchProtocol>)delegate;
 

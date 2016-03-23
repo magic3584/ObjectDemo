@@ -9,35 +9,42 @@
 #import "SearchBar.h"
 
 @implementation SearchBar
--(instancetype)initWithPlaceholder:(NSString *)placeholder {
+
+-(instancetype)initWithFrame:(CGRect)frame searchBarStyle:(SearchBarStyle)style {
     
-    if (self = [super init]) {
+    if (self = [super initWithFrame:frame]) {
+        
         self.userInteractionEnabled = YES;
         
-        CGRect frame = self.frame;
-        frame.size.width = [UIScreen mainScreen].bounds.size.width;
-        frame.size.height = 30;
-        frame.origin.x = 0;
-        frame.origin.y = 70;
-        self.frame = frame;
-        
         _textField = [[UITextField alloc] initWithFrame:frame];
-        _textField.placeholder = placeholder;
-                
+        
         CGRect textFieldFrame = _textField.frame;
         textFieldFrame.origin.x = 0;
         textFieldFrame.origin.y = 0;
+        textFieldFrame.size.width = frame.size.width - frame.size.height;
+        textFieldFrame.size.height = frame.size.height;
         _textField.frame = textFieldFrame;
         
+//        UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width, 0, frame.size.height, frame.size.height)];
+//        [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//        [btn setTitle:@"搜索" forState:UIControlStateNormal];
+//        [btn addTarget:self action:@selector(searchAction) forControlEvents:UIControlEventTouchUpInside];
+//        
         [self addSubview:_textField];
+//        [self addSubview:btn];
+        
     }
     return self;
 }
 //新增
--(instancetype)initWithPlaceholder:(NSString *)placeholder searchLogic:(SearchLogic *)logic {
-    if (self = [self initWithPlaceholder:placeholder]) {
+-(instancetype)initWithFrame:(CGRect)frame searchBarStyle:(SearchBarStyle)style searchLogic:(SearchLogic *)logic {
+    if (self = [self initWithFrame:frame searchBarStyle:style]) {
+        _textField.placeholder = [NSString stringWithFormat:@"%ld",style];
         _logic = logic;
     }
     return self;
 }
+//- (void)searchAction {
+//
+//}
 @end

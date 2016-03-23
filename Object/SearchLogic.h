@@ -9,12 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "ViewController.h"
 
+typedef NS_ENUM(NSInteger, SearchBarStyle){
+    SearchBarStyleHome = 0,
+    SearchBarStylePage,
+    SearchBarStyleLocal
+};
+
 @protocol SearchProtocol <NSObject>
 
-- (void)search;
+- (NSArray *)dataForSearch;
 
 @end
 
 @interface SearchLogic : NSObject<SearchProtocol>
+
+@property (nonatomic, assign) SearchBarStyle style;
+
+-(instancetype)initWithSearchBarStyle:(SearchBarStyle)style;
 
 @end
