@@ -13,7 +13,7 @@
 @class SearchBar;
 @protocol SearchBarProtocol <NSObject>
 
-- (void)didTapSearchBarButton:(SearchBar *)searchBar;
+- (void)didTapSearchBarButton:(SearchBar *)searchBar dataArray:(NSArray *)dataArray;
 
 @end
 
@@ -27,6 +27,6 @@
 @property (nonatomic, weak) id<SearchBarProtocol> delegate;
 
 //新增
--(instancetype)initWithFrame:(CGRect)frame searchBarStyle:(SearchBarStyle)style searchLogic:(SearchLogic *)logic;
+-(instancetype)initWithFrame:(CGRect)frame searchLogic:(SearchLogic *)logic;
 
 @end

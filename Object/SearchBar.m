@@ -10,10 +10,8 @@
 
 @implementation SearchBar
 
--(instancetype)initWithFrame:(CGRect)frame searchBarStyle:(SearchBarStyle)style {
-    
-    if (self = [super initWithFrame:frame]) {
-        
+-(instancetype)initWithFrame:(CGRect)frame searchLogic:(SearchLogic *)logic {
+    if (self = [self initWithFrame:frame]) {
         self.userInteractionEnabled = YES;
         
         _textField = [[UITextField alloc] initWithFrame:frame];
@@ -24,29 +22,24 @@
         textFieldFrame.size.width = frame.size.width - frame.size.height;
         textFieldFrame.size.height = frame.size.height;
         _textField.frame = textFieldFrame;
+        _textField.placeholder = [NSString stringWithFormat:@"%ld",logic.style];
         
         UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - frame.size.height, 0, frame.size.height, frame.size.height)];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [btn setTitle:@"自带搜索" forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(searchAction) forControlEvents:UIControlEventTouchUpInside];
-//
+        //
         [self addSubview:_textField];
         [self addSubview:btn];
         
-    }
-    return self;
-}
-//新增
--(instancetype)initWithFrame:(CGRect)frame searchBarStyle:(SearchBarStyle)style searchLogic:(SearchLogic *)logic {
-    if (self = [self initWithFrame:frame searchBarStyle:style]) {
-        _textField.placeholder = [NSString stringWithFormat:@"%ld",style];
         _logic = logic;
     }
     return self;
 }
 - (void)searchAction {
-    if (_delegate && [_delegate respondsToSelector:@selector(didTapSearchBarButton:)]) {
-        [_delegate didTapSearchBarButton:self];
+    NSArray * arr = [_logic dataForSearch];
+    if (_delegate && [_delegate respondsToSelector:@selector(didTapSearchBarButton:dataArray:)]) {
+        [_delegate didTapSearchBarButton:self dataArray:arr];
     }
 }
 @end
