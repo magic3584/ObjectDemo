@@ -17,8 +17,8 @@
     return self;
 }
 
--(void)search {
-    NSLog(@"Local");
+- (NSArray *)dataForSearch{
+    return @[ @"Local" ];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

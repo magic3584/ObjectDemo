@@ -31,5 +31,5 @@ typedef NS_ENUM(NSInteger, SearchBarStyle) {
 @property (nonatomic, weak) id<HomeSearchBarProtocol> delegate;
 
 -(instancetype)initWithFrame:(CGRect)frame;
-- (void)search;
+- (NSArray *)dataForSearch;
 @end

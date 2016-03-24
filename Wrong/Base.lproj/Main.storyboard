@@ -40,13 +40,22 @@
                                     <segue destination="Uh8-at-jQn" kind="push" id="6dB-aO-NPg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnh-fu-005">
+                                <rect key="frame" x="275" y="212" width="51" height="30"/>
+                                <state key="normal" title="VC搜索"/>
+                                <connections>
+                                    <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i9K-z3-NOB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nnh-fu-005" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="148" id="83j-gG-dvu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="scY-hE-ybl" secondAttribute="bottom" constant="285" id="Akf-44-Y3v"/>
                             <constraint firstItem="2xl-gH-AE4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="PfN-tn-pci"/>
                             <constraint firstAttribute="trailingMargin" secondItem="scY-hE-ybl" secondAttribute="trailing" constant="144" id="hO7-Jc-Lh7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2xl-gH-AE4" secondAttribute="bottom" constant="285" id="pTB-Tb-HRQ"/>
+                            <constraint firstItem="nnh-fu-005" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tBn-6f-Udq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nG5-YU-gaC"/>
@@ -66,13 +75,26 @@
                     <view key="view" contentMode="scaleToFill" id="eTF-Sf-N5z">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35C-ld-pcP">
+                                <rect key="frame" x="275" y="196" width="51" height="30"/>
+                                <state key="normal" title="VC搜索"/>
+                                <connections>
+                                    <action selector="search:" destination="IJg-uA-Gi4" eventType="touchUpInside" id="tdO-RS-d4j"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="35C-ld-pcP" firstAttribute="top" secondItem="Koz-mo-Y8N" secondAttribute="bottom" constant="132" id="axJ-ai-vhR"/>
+                            <constraint firstItem="35C-ld-pcP" firstAttribute="centerX" secondItem="eTF-Sf-N5z" secondAttribute="centerX" id="rYk-L0-Sk8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dHa-rO-nFI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xrt-kM-yvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="-131"/>
+            <point key="canvasLocation" x="2151" y="-148"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="Ivv-Pb-diu">
@@ -85,13 +107,26 @@
                     <view key="view" contentMode="scaleToFill" id="Cd7-SL-dsJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ace-8e-Tjh">
+                                <rect key="frame" x="275" y="206" width="51" height="30"/>
+                                <state key="normal" title="VC搜索"/>
+                                <connections>
+                                    <action selector="search:" destination="Uh8-at-jQn" eventType="touchUpInside" id="u2Q-59-ilD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ace-8e-Tjh" firstAttribute="centerX" secondItem="Cd7-SL-dsJ" secondAttribute="centerX" id="YQJ-vL-1F2"/>
+                            <constraint firstItem="ace-8e-Tjh" firstAttribute="top" secondItem="fXQ-ta-G8S" secondAttribute="bottom" constant="142" id="yBK-Wx-PcG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fee-1T-0ES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhi-G7-Q0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="532"/>
+            <point key="canvasLocation" x="2151" y="526"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p5a-vC-64T">

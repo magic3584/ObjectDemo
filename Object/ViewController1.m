@@ -9,7 +9,7 @@
 #import "ViewController1.h"
 #import "SearchBar.h"
 
-@interface ViewController1 ()
+@interface ViewController1 ()<SearchBarProtocol>
 @property (nonatomic, strong) SearchBar *bar;
 
 @end
@@ -27,9 +27,14 @@
 #pragma mark - actions
 - (IBAction)searchAction:(id)sender {
     NSArray * arr = [_bar.logic dataForSearch];
-    NSLog(@"%@",arr[0]);
+    NSLog(@"VC搜索结果%@",arr[0]);
 }
 
+#pragma mark - SearchBarProtocol
+-(void)didTapSearchBarButton:(SearchBar *)searchBar {
+    NSArray * arr = [_bar.logic dataForSearch];
+    NSLog(@"代理搜索结果%@",arr[0]);
+}
 
 #pragma mark -getters
 - (SearchBar *)bar {
@@ -37,8 +42,8 @@
     if (_bar == nil) {
         SearchLogic * logic = [[SearchLogic alloc] initWithSearchBarStyle:SearchBarStylePage];
 
-        _bar = [[SearchBar alloc] initWithFrame:CGRectMake(0, 100, 320, 50) searchBarStyle:SearchBarStylePage searchLogic:logic];
-        
+        _bar = [[SearchBar alloc] initWithFrame:CGRectMake(0, 40, 180, 80) searchBarStyle:SearchBarStylePage searchLogic:logic];
+        _bar.delegate = self;
     }
     return _bar;
 }

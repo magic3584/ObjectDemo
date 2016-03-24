@@ -45,8 +45,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNC-iq-aKo">
-                                <rect key="frame" x="285" y="112" width="30" height="30"/>
-                                <state key="normal" title="搜索"/>
+                                <rect key="frame" x="274.5" y="112" width="51" height="30"/>
+                                <state key="normal" title="VC搜索"/>
                                 <connections>
                                     <action selector="searchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sr9-H0-zJd"/>
                                 </connections>
@@ -81,8 +81,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbU-oV-IBL">
-                                <rect key="frame" x="285" y="165" width="30" height="30"/>
-                                <state key="normal" title="搜索"/>
+                                <rect key="frame" x="274.5" y="165" width="51" height="30"/>
+                                <state key="normal" title="VC搜索"/>
                                 <connections>
                                     <action selector="searchAction:" destination="gSc-ii-e7x" eventType="touchUpInside" id="aoy-oB-kiC"/>
                                 </connections>
@@ -113,8 +113,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9Z-Z0-bVe">
-                                <rect key="frame" x="285" y="155" width="30" height="30"/>
-                                <state key="normal" title="搜索"/>
+                                <rect key="frame" x="274.5" y="155" width="51" height="30"/>
+                                <state key="normal" title="VC搜索"/>
                                 <connections>
                                     <action selector="searchAction:" destination="KOu-U5-cvY" eventType="touchUpInside" id="ng4-gH-puM"/>
                                 </connections>

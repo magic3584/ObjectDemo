@@ -15,8 +15,8 @@
     }
     return self;
 }
--(void)search {
-    NSLog(@"Page");
+- (NSArray *)dataForSearch{
+    return @[ @"Page" ];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

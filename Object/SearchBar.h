@@ -10,7 +10,12 @@
 #import <UIKit/UIKit.h>
 #import "SearchLogic.h"
 
+@class SearchBar;
+@protocol SearchBarProtocol <NSObject>
 
+- (void)didTapSearchBarButton:(SearchBar *)searchBar;
+
+@end
 
 @interface SearchBar : UIView
 
@@ -19,11 +24,9 @@
 //新增
 @property (nonatomic, strong) SearchLogic *logic;
 
--(instancetype)initWithFrame:(CGRect)frame searchBarStyle:(SearchBarStyle)style;
+@property (nonatomic, weak) id<SearchBarProtocol> delegate;
 
 //新增
 -(instancetype)initWithFrame:(CGRect)frame searchBarStyle:(SearchBarStyle)style searchLogic:(SearchLogic *)logic;
-
-//-(instancetype)initWithPlaceholder:(NSString *)placeholder searchProtocol:(id<SearchProtocol>)delegate;
 
 @end

@@ -24,12 +24,12 @@
         textFieldFrame.size.width = frame.size.width - buttonWidth;
         textFieldFrame.size.height = buttonWidth;
         _textField.frame = textFieldFrame;
-        _textField.placeholder = @"0";
+        _textField.placeholder = @"Home";
 
         UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(textFieldFrame.size.width, 0, buttonWidth, buttonWidth)];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        [btn setTitle:@"搜索" forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+        [btn setTitle:@"自带搜索" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
         
         
@@ -42,14 +42,13 @@
         [_delegate didTapHomeSearchBar:self];
     }
 }
-- (void)search {
-    NSLog(@"Home");
+- (NSArray *)dataForSearch{
+    return @[ @"Home" ];
 }
 
 -(UITextField *)textField {
     if (!_textField) {
         _textField = [[UITextField alloc] init];
-        _textField.placeholder = @"搜索";
     }
     return _textField;
 }

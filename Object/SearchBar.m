@@ -25,13 +25,13 @@
         textFieldFrame.size.height = frame.size.height;
         _textField.frame = textFieldFrame;
         
-//        UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width, 0, frame.size.height, frame.size.height)];
-//        [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-//        [btn setTitle:@"搜索" forState:UIControlStateNormal];
-//        [btn addTarget:self action:@selector(searchAction) forControlEvents:UIControlEventTouchUpInside];
-//        
+        UIButton * btn = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - frame.size.height, 0, frame.size.height, frame.size.height)];
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btn setTitle:@"自带搜索" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(searchAction) forControlEvents:UIControlEventTouchUpInside];
+//
         [self addSubview:_textField];
-//        [self addSubview:btn];
+        [self addSubview:btn];
         
     }
     return self;
@@ -44,7 +44,9 @@
     }
     return self;
 }
-//- (void)searchAction {
-//
-//}
+- (void)searchAction {
+    if (_delegate && [_delegate respondsToSelector:@selector(didTapSearchBarButton:)]) {
+        [_delegate didTapSearchBarButton:self];
+    }
+}
 @end

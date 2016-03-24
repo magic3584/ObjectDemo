@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Wrong/HomeSearchBar.m"
-            timestampString = "480415679.616613"
+            filePath = "Object/ViewController.m"
+            timestampString = "480475454.336804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-textField"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-searchAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
